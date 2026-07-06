@@ -1,14 +1,22 @@
 {
-  "name": "distributed-key-value-store-with-consistent-hashing-and-caching",
+  "name": "distributed-key-value-store",
   "version": "1.0.0",
+  "description": "Simulation of a distributed key-value storage using Consistent Hashing and LRU Cache",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "distributed-systems",
+    "consistent-hashing",
+    "cache",
+    "lru",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^5.6.2"
   }
