@@ -1,0 +1,7 @@
+# Runs the distributed key-value store simulation in a container.
+#   docker compose up --build
+services:
+  kv-store:
+    build: .
+    container_name: distributed-kv-store
+    tty: true          # keep chalk colors in the output

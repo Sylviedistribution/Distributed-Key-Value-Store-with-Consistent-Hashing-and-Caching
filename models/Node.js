@@ -50,6 +50,18 @@ class Node {
 
     }
 
+    entries() {
+
+        return [...this.data.entries()];
+
+    }
+
+    clear() {
+
+        this.data.clear();
+
+    }
+
 }
 
 export default Node;

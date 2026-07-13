@@ -1,0 +1,14 @@
+# Stable endpoint exposing the pods of the deployment.
+# (The simulation has no HTTP server yet; this manifest is a
+# template for the day the store exposes a REST API.)
+apiVersion: v1
+kind: Service
+metadata:
+  name: distributed-kv-store-service
+spec:
+  selector:
+    app: distributed-kv-store
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: ClusterIP

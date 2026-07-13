@@ -1,0 +1,25 @@
+# Kubernetes Deployment for the simulation.
+# Educational bridge with the course: in a real system, EACH
+# storage node would be its own Deployment (or StatefulSet),
+# and Kubernetes would provide the self-healing and scaling
+# that this project simulates in-process.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: distributed-kv-store
+  labels:
+    app: distributed-kv-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: distributed-kv-store
+  template:
+    metadata:
+      labels:
+        app: distributed-kv-store
+    spec:
+      containers:
+        - name: kv-store
+          image: distributed-kv-store:latest
+          imagePullPolicy: IfNotPresent
